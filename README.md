@@ -1,71 +1,83 @@
-# 📧 Email Spam Classifier
+# MONTH-2 Projects Repository
 
-An end-to-end Machine Learning web application designed to detect and classify spam emails using Natural Language Processing (NLP) and supervised learning.
-
-## 🚀 Features
-
-- **Machine Learning Engine**: TF-IDF vectorization with trained classification models (Scikit-learn).
-- **Keyword Extraction**: Identifies suspicious spam triggers and keywords.
-- **RESTful API**: FastAPI backend providing endpoints for single predictions, bulk predictions, and metrics.
-- **Interactive UI**: Modern React + Vite frontend with Tailwind CSS styling and intuitive dashboard.
+Welcome to the **MONTH-2** engineering and machine learning repository. This repository hosts two production-grade full-stack artificial intelligence and machine learning applications, each isolated into its own self-contained directory.
 
 ---
 
-## 🛠️ Tech Stack
-
-- **Frontend**: React, Vite, Tailwind CSS, Lucide Icons, Recharts
-- **Backend**: FastAPI, Uvicorn, Pydantic
-- **Machine Learning**: Scikit-Learn, Joblib, Pandas, NumPy, NLTK
-
----
-
-## 📂 Project Structure
+## 📁 Repository Structure
 
 ```
-Email spam classifier/
-├── backend/            # FastAPI REST backend
-│   ├── app/
-│   │   ├── routes/     # API route handlers
-│   │   ├── schemas/    # Pydantic data schemas
-│   │   ├── services/   # Preprocessing & ML inference
-│   │   └── main.py     # FastAPI entrypoint
-│   ├── models/         # Model weights & prediction history
-│   └── requirements.txt
-├── frontend/           # React + Vite application
-│   ├── src/
-│   │   ├── components/
-│   │   ├── pages/
-│   │   ├── services/
-│   │   └── App.jsx
-│   ├── package.json
-│   └── vite.config.js
-├── ml/                 # Model training & datasets
-│   ├── dataset/
-│   ├── models/
-│   ├── preprocessing.py
-│   └── train.py
-├── tests/              # Automated unit tests
-└── README.md
+MONTH-2/
+│
+├── OptiMach-AI/                 # Industrial Predictive Maintenance Platform
+│   ├── backend/                 # FastAPI ML inference & telemetry service
+│   ├── frontend/                # React 18, Three.js 3D Factory Twin & Tailwind CSS
+│   ├── requirements.txt         # Backend Python dependencies
+│   └── README.md                # Dedicated OptiMach AI documentation
+│
+├── PhishShift/                  # Intelligent Message Risk Scanner (Cybersecurity ML)
+│   ├── backend/                 # FastAPI REST API with explainability engine
+│   ├── frontend/                # React 19, Tailwind CSS v4 & Recharts dashboard
+│   ├── ml/                      # TF-IDF, Calibrated SVM, NB, Robustness pipelines
+│   ├── data/                    # Leakage-safe split datasets (train/val/holdout)
+│   ├── docs/                    # Architecture & requirements traceability
+│   └── README.md                # Dedicated PhishShift documentation
+│
+└── README.md                    # Root repository index
 ```
 
 ---
 
-## ⚡ Quick Start
+## 🚀 Projects Overview
 
-### 1. Backend Setup
-```bash
-cd backend
-python -m venv venv
-venv\Scripts\activate      # On Windows
-pip install -r requirements.txt
-uvicorn app.main:app --reload --port 8000
-```
+### 1. OptiMach AI ⚡
+> **Intelligent Industrial Predictive Maintenance & Machine Health Monitoring Platform**
+- **Domain:** Industrial IoT, Digital Twins, Machine Learning, Reliability Engineering.
+- **Key Highlights:**
+  - Anticipates equipment failure within a **7-day predictive horizon** against the Microsoft Azure Predictive Maintenance benchmark.
+  - Interactive **Three.js** 3D Factory Floor digital twin with real-time HUD telemetry.
+  - Supervised Random Forest and Gradient Boosting classification models.
+- **Directory:** [`OptiMach-AI/`](./OptiMach-AI/)
+- **Quick Run:**
+  ```powershell
+  # Backend
+  cd OptiMach-AI
+  pip install -r requirements.txt
+  python -m uvicorn backend.app:app --host 127.0.0.1 --port 8000 --reload
 
-### 2. Frontend Setup
-```bash
-cd frontend
-npm install
-npm run dev
-```
+  # Frontend
+  cd OptiMach-AI/frontend
+  npm install
+  npm run dev
+  ```
 
-The application will be running at `http://localhost:5173` with the backend API at `http://localhost:8000`.
+---
+
+### 2. PhishShift 🛡️
+> **Intelligent Message Risk Scanner & Explainable Threat Analysis Platform**
+- **Domain:** Cybersecurity, Natural Language Processing (NLP), Model Explainability.
+- **Key Highlights:**
+  - Multi-tier ML pipeline: Calibrated Linear SVM (Platt Scaling), TF-IDF Logistic Regression, Naive Bayes, and Rule Baseline.
+  - Word-level feature attribution and actionable safety prescriptions.
+  - Zero-leakage campaign holdout validation and 8-variation adversarial robustness testing suite.
+  - 100% automated test coverage (21/21 passing backend unit/integration tests).
+- **Directory:** [`PhishShift/`](./PhishShift/)
+- **Quick Run:**
+  ```powershell
+  # Backend
+  cd PhishShift/backend
+  pip install -r requirements.txt
+  python -m uvicorn app.main:app --host 127.0.0.1 --port 8000 --reload
+
+  # Frontend
+  cd PhishShift/frontend
+  npm install
+  npm run dev
+  ```
+
+---
+
+## 🛠️ Global Prerequisites
+- **Python:** 3.10+ (Tested on Python 3.12.10)
+- **Node.js:** 18+ (Tested on Node.js v24.21.0, npm 11.19.0)
+- **OS:** Windows / macOS / Linux

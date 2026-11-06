@@ -1,11 +1,11 @@
 services:
   # -------------------------------------------------------------
-  # Backend Web Service (FastAPI + ML Model Inference)
+  # Project 3: Email-Spam-Classifier Backend (FastAPI Web Service)
   # -------------------------------------------------------------
   - type: web
     name: email-spam-classifier-backend
     runtime: python
-    rootDir: backend
+    rootDir: Email-Spam-Classifier/backend
     buildCommand: pip install --upgrade pip && pip install -r requirements.txt
     startCommand: uvicorn app.main:app --host 0.0.0.0 --port $PORT
     envVars:
@@ -17,11 +17,11 @@ services:
     autoDeploy: true
 
   # -------------------------------------------------------------
-  # Frontend Static Site (React + Vite SPA)
+  # Project 3: Email-Spam-Classifier Frontend (React Vite Static Site)
   # -------------------------------------------------------------
   - type: static_site
     name: email-spam-classifier-frontend
-    rootDir: frontend
+    rootDir: Email-Spam-Classifier/frontend
     buildCommand: npm install && npm run build
     staticPublishPath: dist
     envVars:
@@ -35,4 +35,3 @@ services:
         source: /*
         destination: /index.html
     autoDeploy: true
-
